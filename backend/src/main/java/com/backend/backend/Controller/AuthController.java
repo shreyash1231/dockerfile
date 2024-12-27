@@ -13,8 +13,10 @@ import com.backend.backend.Entity.student;
 import com.backend.backend.Service.serservice;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/authController")
 public class AuthController{
     @Autowired

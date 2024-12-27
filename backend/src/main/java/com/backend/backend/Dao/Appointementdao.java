@@ -11,6 +11,7 @@ import com.backend.backend.Entity.Appointment;
 @Repository
 public interface Appointementdao extends MongoRepository<Appointment,Long> {
 
-    @Query("{}") 
-    List<Appointment> getstudentdata();
+    @Query("{ 'profid': ?0 }") 
+    List<Appointment> getstudentdata(Long no);
+    
 }

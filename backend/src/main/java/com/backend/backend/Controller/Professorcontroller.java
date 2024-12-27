@@ -14,8 +14,10 @@ import com.backend.backend.Entity.Availability;
 import com.backend.backend.Service.profservice;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/professor")
 public class Professorcontroller {
 
@@ -41,6 +43,6 @@ public class Professorcontroller {
     public List<Appointment> getstudentdata(HttpSession session)
     {
         checkAuthentication(session);
-        return profser.getstudentdata();
+        return profser.getstudentdata((Long)session.getAttribute("professor"));
     }
 }

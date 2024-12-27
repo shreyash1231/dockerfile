@@ -1,15 +1,14 @@
 package com.backend.backend.Entity;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Document(collection = "appointment")
 @Data
 @NoArgsConstructor
@@ -17,10 +16,16 @@ import lombok.NoArgsConstructor;
 public class Appointment {
 
     @Id
-    private Long id; 
+    private Long id;
     private Long profid;
     private Long studentid;
-    private LocalTime starttime;
-    private LocalTime endtime;
-    private LocalDate dateapp;
+
+    @JsonFormat(pattern = "HH:mm:ss", shape = JsonFormat.Shape.STRING)
+    private String starttime;
+
+    @JsonFormat(pattern = "HH:mm:ss", shape = JsonFormat.Shape.STRING)
+    private String endtime;
+
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
+    private String dateapp;
 }

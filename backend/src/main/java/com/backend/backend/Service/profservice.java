@@ -21,11 +21,11 @@ public class profservice {
     }
 
     public List<Availability> availprof() {
-       return availdao.availprof();
+       return availdao.findAll();
     }
 
-    public List<Appointment> getstudentdata() {
-       return appdao.getstudentdata();
+    public List<Appointment> getstudentdata(Long no) {
+       return appdao.getstudentdata(no);
     }
     
 }

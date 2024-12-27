@@ -17,8 +17,10 @@ import com.backend.backend.Service.profservice;
 import com.backend.backend.Service.studentservice;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/student")
 public class Studentcontroller {
     @Autowired
