@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the Spring Boot JAR file into the container
-COPY target/backend.jar app.jar
+COPY target/testing.jar testing.jar
 
 # Expose the port the app runs on
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["java", "-jar", "backend.jar"]
+ENTRYPOINT ["java", "-jar", "testing.jar"]

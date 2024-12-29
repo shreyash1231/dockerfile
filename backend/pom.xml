@@ -82,6 +82,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>backend</finalName>
+		<finalName>testing</finalName>
 	</build>
 </project>

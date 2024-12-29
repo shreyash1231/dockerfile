@@ -8,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Document(collection = "avail_data")
 @Data
 @NoArgsConstructor
